@@ -218,7 +218,6 @@ async function downloadVideo(url, index) {
 
     const blob = await response.blob();
     const objectUrl = URL.createObjectURL(blob);
-    console.log(index, "🔺  RAM - downloadVideo - objectUrl:", objectUrl);
 
     // Create a temporary link element to trigger download
     const a = document.createElement("a");
