@@ -1,0 +1,19 @@
+// manifest.json
+{
+  "manifest_version": 3,
+  "name": "Facebook Ads Video Downloader",
+  "version": "1.0",
+  "description": "Download all videos from Facebook Ads Library",
+  "permissions": ["downloads", "activeTab", "scripting"],
+  "host_permissions": ["https://www.facebook.com/ads/library/*"],
+  "action": {
+    "default_title": "FB Ads Video Downloader"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/ads/library/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
